@@ -1,0 +1,19 @@
+# ACM模式例子1：测试用例有多组，但是每组在第1行没有给出具体的组数
+import sys
+for line in sys.stdin:   # sys.stdin是python的一个对象，代表标准输入流，这里将其作为迭代器，逐行从键盘或文件中读取数据
+    try:
+        a, b = line.split()
+        print(int(a) + int(b))
+    except:
+        break
+
+# ACM模式例子2：测试用例有多组，但是每组在第1行给出具体的组数
+while True:
+    try:
+        N = int(input())
+        for _ in range(N):
+            ls = list(map(int, input().split()))  # a, b = map(int, input().split())
+            print(sum(ls))
+    except:
+        break
+
